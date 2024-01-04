@@ -2,8 +2,6 @@ import { View, Image, ImageBackground, Text } from 'react-native';
 
 const logo_image = require("../assets/adaptive-icon.png");
 
-
-
 export default function Image_3() {
   return (
     <View style={{flex: 1}}>
