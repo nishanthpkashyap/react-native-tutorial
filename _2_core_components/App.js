@@ -5,6 +5,7 @@ import Image_3 from './components/_3_Image';
 import ScrollView_4 from './components/_4_ScrollView';
 import Button_5 from './components/_5_Button';
 import Pressable_6 from './components/_6_Pressable';
+import Modal_7 from './components/_7_Modal';
 
 export default function App(){
   return(
@@ -14,7 +15,8 @@ export default function App(){
       {/* <Image_3/> */}
       {/* <ScrollView_4/> */}
       {/* <Button_5/> */}
-      <Pressable_6/>
+      {/* <Pressable_6/> */}
+      <Modal_7/>
     </View>
   );
 }
