@@ -6,6 +6,7 @@ import ScrollView_4 from './components/_4_ScrollView';
 import Button_5 from './components/_5_Button';
 import Pressable_6 from './components/_6_Pressable';
 import Modal_7 from './components/_7_Modal';
+import StatusBar_8 from './components/_8_Statusbar';
 
 export default function App(){
   return(
@@ -16,7 +17,8 @@ export default function App(){
       {/* <ScrollView_4/> */}
       {/* <Button_5/> */}
       {/* <Pressable_6/> */}
-      <Modal_7/>
+      {/* <Modal_7/> */}
+      <StatusBar_8/>
     </View>
   );
 }
