@@ -1,6 +1,5 @@
 import { View, Image, ImageBackground, Text } from 'react-native';
-
-const logo_image = require("../assets/adaptive-icon.png");
+import logo_image from '../assets/adaptive-icon.png';
 
 export default function Image_3() {
   return (

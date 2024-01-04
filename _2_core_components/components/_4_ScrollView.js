@@ -1,6 +1,5 @@
-import { View, ScrollView, Image, Text } from 'react-native';
-
-const logo_image = require("../assets/adaptive-icon.png");
+import { ScrollView, Image, Text } from 'react-native';
+import logo_image from '../assets/adaptive-icon.png';
 
 export default function ScrollView_4() {
     return (
