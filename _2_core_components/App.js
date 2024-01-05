@@ -7,10 +7,11 @@ import Button_5 from './components/_5_Button';
 import Pressable_6 from './components/_6_Pressable';
 import Modal_7 from './components/_7_Modal';
 import StatusBar_8 from './components/_8_Statusbar';
+import ActivityIdicator_9 from './components/_9_Activity_Idicator';
 
 export default function App(){
   return(
-    <View style={{flex: 1, backgroundColor: "plum", padding: 60}}>
+    <View style={{flex: 1, backgroundColor: "white", padding: 60}}>
       {/* <View_1/> */}
       {/* <Text_2/> */}
       {/* <Image_3/> */}
@@ -18,7 +19,8 @@ export default function App(){
       {/* <Button_5/> */}
       {/* <Pressable_6/> */}
       {/* <Modal_7/> */}
-      <StatusBar_8/>
+      {/* <StatusBar_8/> */}
+      <ActivityIdicator_9/>
     </View>
   );
 }
