@@ -9,6 +9,7 @@ import Modal_7 from './components/_7_Modal';
 import StatusBar_8 from './components/_8_Statusbar';
 import ActivityIdicator_9 from './components/_9_Activity_Idicator';
 import Alert_10 from './components/_10_Alert';
+import CustomComponent_11 from './components/_11_CustomComponent';
 
 export default function App(){
   return(
@@ -22,7 +23,8 @@ export default function App(){
       {/* <Modal_7/> */}
       {/* <StatusBar_8/> */}
       {/* <ActivityIdicator_9/> */}
-      <Alert_10/>
+      {/* <Alert_10/> */}
+      <CustomComponent_11 name={"React"}/>
     </View>
   );
 }
