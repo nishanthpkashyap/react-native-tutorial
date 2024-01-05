@@ -1,4 +1,4 @@
-import { View, StatusBar, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 
 export default function ActivityIdicator_9() {
     return (

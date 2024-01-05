@@ -8,6 +8,7 @@ import Pressable_6 from './components/_6_Pressable';
 import Modal_7 from './components/_7_Modal';
 import StatusBar_8 from './components/_8_Statusbar';
 import ActivityIdicator_9 from './components/_9_Activity_Idicator';
+import Alert_10 from './components/_10_Alert';
 
 export default function App(){
   return(
@@ -20,7 +21,8 @@ export default function App(){
       {/* <Pressable_6/> */}
       {/* <Modal_7/> */}
       {/* <StatusBar_8/> */}
-      <ActivityIdicator_9/>
+      {/* <ActivityIdicator_9/> */}
+      <Alert_10/>
     </View>
   );
 }
