@@ -1,13 +1,19 @@
 import { View, StyleSheet, Text } from "react-native";
 
 export default function BoxModel_3(){
+    /*
+        border radius doesn't work directly for <Text> elements in iOS. 
+        So, we have to wrap the <Text> element with <View> instead and apply the border radius to the <View>.
+    */
     return (
         <View>
             <View style={[styles.box, styles.lightBlueBg]}>
-                <Text style={{borderRadius: 5, backgroundColor: "violet", padding: 10}}>Light Blue Box</Text>
+                <Text style={{borderRadius: 5, backgroundColor: "violet", padding: 10}}>Box Radius - Android Only</Text> 
             </View>
             <View style={[styles.box, styles.lightGreenBg]}>
-                <Text>Light Green Box</Text>
+                <View style={{borderRadius: 5, backgroundColor: "violet", padding: 5}}>
+                    <Text>Box Radius - iOS & Android</Text>
+                </View>
             </View>
         </View>
     )
