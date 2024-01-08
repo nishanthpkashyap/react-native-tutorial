@@ -1,10 +1,16 @@
 import { StyleSheet, View } from 'react-native';
 import Flex from './components/_1_Flex';
+import FlexDirection from './components/_2_Flex_Direction';
+import JustifyContent from './components/_3_Justify_Content.';
+import AlignItems from './components/_4_Align_Items';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Flex/>
+      {/* <Flex/> */}
+      {/* <FlexDirection/> */}
+      {/* <JustifyContent/> */}
+      <AlignItems/>
     </View>
   );
 }

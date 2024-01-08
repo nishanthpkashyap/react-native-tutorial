@@ -1,4 +1,3 @@
-import { View } from 'react-native';
 import Box from './Box'
 
 export default function Flex(){
