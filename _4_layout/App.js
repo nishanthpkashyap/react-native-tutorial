@@ -3,6 +3,7 @@ import Flex from './components/_1_Flex';
 import FlexDirection from './components/_2_Flex_Direction';
 import JustifyContent from './components/_3_Justify_Content.';
 import AlignItems from './components/_4_Align_Items';
+import AlignSelf from './components/_5_Align_Self';
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
       {/* <Flex/> */}
       {/* <FlexDirection/> */}
       {/* <JustifyContent/> */}
-      <AlignItems/>
+      {/* <AlignItems/> */}
+      <AlignSelf/>
     </View>
   );
 }
