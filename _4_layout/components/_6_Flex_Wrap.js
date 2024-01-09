@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native';
 import Box from './Box'
 
-export default function AlignSelf(){
+export default function FlexWrap(){
     /* when alignSelf = auto, the value of the parent's alignItems will be inherited */
     return (
         <View style={[styles.container]}>
@@ -18,7 +18,7 @@ export default function AlignSelf(){
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: "center"
+        height: 600,
+        flexWrap: "wrap-reverse",
     }
 });
