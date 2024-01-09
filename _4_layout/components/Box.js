@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     box: {
         backgroundColor: "white",
         padding: 20,
+        // height: 50, width: 50, // used for alignContent: space-between|space-around|space-evenly values
     },
     text: {
         fontSize: 24,
