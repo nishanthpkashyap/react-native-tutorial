@@ -7,6 +7,7 @@ import AlignSelf from './components/_5_Align_Self';
 import FlexWrap from './components/_6_Flex_Wrap';
 import AlignContent from './components/_7_Align_Content';
 import Gap from './components/_8_Gap';
+import FlexBasis from './components/_9_Flex_Basis';
 
 export default function App() {
   return (
@@ -18,13 +19,15 @@ export default function App() {
       {/* <AlignSelf/> */}
       {/* <FlexWrap/> */}
       {/* <AlignContent/> */}
-      <Gap/>
+      {/* <Gap/> */}
+      <FlexBasis/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     marginTop: 64,
     borderColor: "red",
     borderWidth: 6,

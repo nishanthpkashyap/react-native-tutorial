@@ -2,7 +2,6 @@ import { View, StyleSheet } from 'react-native';
 import Box from './Box'
 
 export default function Gap(){
-    /* when alignSelf = auto, the value of the parent's alignItems will be inherited */
     return (
         <View style={[styles.container]}>
             <Box style={{backgroundColor: "cyan"}}>Box 1</Box>
