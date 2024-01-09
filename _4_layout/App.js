@@ -6,6 +6,7 @@ import AlignItems from './components/_4_Align_Items';
 import AlignSelf from './components/_5_Align_Self';
 import FlexWrap from './components/_6_Flex_Wrap';
 import AlignContent from './components/_7_Align_Content';
+import Gap from './components/_8_Gap';
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       {/* <AlignItems/> */}
       {/* <AlignSelf/> */}
       {/* <FlexWrap/> */}
-      <AlignContent/>
+      {/* <AlignContent/> */}
+      <Gap/>
     </View>
   );
 }
