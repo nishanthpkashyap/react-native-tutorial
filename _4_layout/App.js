@@ -9,6 +9,7 @@ import AlignContent from './components/_7_Align_Content';
 import Gap from './components/_8_Gap';
 import FlexBasis from './components/_9_Flex_Basis';
 import FlexShrink from './components/_10_Flex_Shrink';
+import FlexGrow from './components/_11_Flex_Grow';
 
 export default function App() {
   return (
@@ -22,7 +23,8 @@ export default function App() {
       {/* <AlignContent/> */}
       {/* <Gap/> */}
       {/* <FlexBasis/> */}
-      <FlexShrink/>
+      {/* <FlexShrink/> */}
+      <FlexGrow/>
     </View>
   );
 }
