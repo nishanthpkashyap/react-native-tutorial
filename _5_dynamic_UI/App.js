@@ -1,8 +1,10 @@
-import { StyleSheet, View } from "react-native";
+import { Alert, StyleSheet, View } from "react-native";
 import DynamicAPI from "./components/_1_Dimension_API";
 import DynamicAPIDrawback from "./components/_2_DimensionAPI_Drawback";
 import WindowDimensionHook from "./components/_3_UseDimensions";
 import SafeAreaview from "./components/_4_Safe_Area_View";
+import PlatformModule from "./components/_5_Platform_Module";
+import CustomButtonIOS from "./components/custom_button/CustomButton";
 
 export default function App() {
   return (
@@ -10,7 +12,10 @@ export default function App() {
       {/* <DynamicAPI/> */}
       {/* <DynamicAPIDrawback/> */}
       {/* <WindowDimensionHook/> */}
-      <SafeAreaview />
+      {/* <SafeAreaview /> */}
+      {/* <PlatformModule/> */}
+      <CustomButtonIOS title={"I am a Button"} onPress={()=>alert("Button pressed!")}/>
+
     </View>
   );
 }
@@ -19,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "violet",
-    // marginTop: 65,
+    marginTop: 65,
     // justifyContent: "center",
     // alignItems: "center",
   },
