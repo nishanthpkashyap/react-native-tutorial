@@ -1,12 +1,14 @@
 import { StyleSheet, View } from 'react-native';
 import DynamicAPI from './components/_1_Dimension_API';
 import DynamicAPIDrawback from './components/_2_DimensionAPI_Drawback';
+import WindowDimensionHook from './components/_3_UseDimensions';
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <DynamicAPI/> */}
-      <DynamicAPIDrawback/>
+      {/* <DynamicAPIDrawback/> */}
+      <WindowDimensionHook/>
     </View>
   );
 }
