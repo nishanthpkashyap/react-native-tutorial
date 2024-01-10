@@ -10,6 +10,7 @@ import Gap from './components/_8_Gap';
 import FlexBasis from './components/_9_Flex_Basis';
 import FlexShrink from './components/_10_Flex_Shrink';
 import FlexGrow from './components/_11_Flex_Grow';
+import RelativeAbsolute from './components/_12_Relative_Absolute';
 
 export default function App() {
   return (
@@ -24,7 +25,8 @@ export default function App() {
       {/* <Gap/> */}
       {/* <FlexBasis/> */}
       {/* <FlexShrink/> */}
-      <FlexGrow/>
+      {/* <FlexGrow/> */}
+      <RelativeAbsolute/>
     </View>
   );
 }
