@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Platform, Image } from "react-native";
 
 const getTypeDetails = (type)=>{
+
     switch (type.toLowerCase()) {
         case "electric":
       return { borderColor: "#FFD700", emoji: "⚡️" };
@@ -42,11 +43,11 @@ export default function PokemonCard({
         </View>
       </View>
 
-      <View>
-        <Text>Moves: {moves.join(", ")}</Text>
+      <View style={[styles.movesContainer]} >
+        <Text style={[styles.moves]}>Moves: {moves.join(", ")}</Text>
       </View>
-      <View>
-        <Text>Weakness: {weakness.join(", ")}</Text>
+      <View style={[styles.weaknessContainer]}>
+        <Text style={[styles.weakness]}>Weakness: {weakness.join(", ")}</Text>
       </View>
     </View>
   );
@@ -89,5 +90,39 @@ const styles = StyleSheet.create({
     width: "100%",
     marginBottom: 16,
     // objectFit: "contain" //or you can use ResizeMode props of <Image/> instead
+  },
+  typeContainer: {
+    marginBottom: 40,
+    alignItems: "center",
+  },
+  typeBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 20,
+    borderWidth: 4,
+  },
+  typeEmoji: {
+    fontSize: 30,
+    marginRight: 12,
+  },
+  type: {
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  movesContainer: {
+    marginBottom: 16,
+  },
+  moves: {
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  weaknessContainer: {
+    marginBottom: 8,
+  },
+  weakness: {
+    fontSize: 22,
+    fontWeight: "bold",
   },
 });

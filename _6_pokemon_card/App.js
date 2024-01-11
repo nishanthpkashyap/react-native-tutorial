@@ -8,49 +8,47 @@ import Bulbasaur from './assets/bulbasaur.png';
 
 export default function App() {
 
-  const charmanderData = {
-    name: "Charmander",
-    image: Charmander,
-    type: "Fire",
-    hp: 39,
-    moves: ["Scratch", "Ember", "Growl", "Leer",],
-    weakness: ["Water", "Rock",],
-  };
-
-  const squirtleData = {
-    name: "Squirtle",
-    image: Squirtle,
-    type: "Water",
-    hp: 44,
-    moves: ["Tackle", "Water Gun", "Tail Whip", "Withdraw"],
-    weakness: ["Electric", "Grass"],
-  };
-
-  const bulbasaurData = {
-    name: "Bulbasaur",
-    image: Bulbasaur,
-    type: "Grass",
-    hp: 45,
-    moves: ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
-    weakness: ["Fire", "Ice", "Flying", "Psychic"],
-  };
-
-  const pikachuData = {
-    name: "Pikachu",
-    image: Pikachu,
-    type: "Electric",
-    hp: 35,
-    moves: ["Quick Attack", "Thunderbolt", "Tail Whip", "Growl"],
-    weakness: ["Ground"],
-  };
+  const pokemonData = [
+    {
+      name: "Charmander",
+      image: Charmander,
+      type: "Fire",
+      hp: 39,
+      moves: ["Scratch", "Ember", "Growl", "Leer",],
+      weakness: ["Water", "Rock",],
+    },
+    {
+      name: "Squirtle",
+      image: Squirtle,
+      type: "Water",
+      hp: 44,
+      moves: ["Tackle", "Water Gun", "Tail Whip", "Withdraw"],
+      weakness: ["Electric", "Grass"],
+    },
+    {
+      name: "Bulbasaur",
+      image: Bulbasaur,
+      type: "Grass",
+      hp: 45,
+      moves: ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
+      weakness: ["Fire", "Ice", "Flying", "Psychic"],
+    },
+    {
+      name: "Pikachu",
+      image: Pikachu,
+      type: "Electric",
+      hp: 35,
+      moves: ["Quick Attack", "Thunderbolt", "Tail Whip", "Growl"],
+      weakness: ["Ground"],
+    },
+  ];
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <PokemonCard pokemonData={charmanderData}/>
-        <PokemonCard pokemonData={squirtleData}/>
-        <PokemonCard pokemonData={bulbasaurData}/>
-        <PokemonCard pokemonData={pikachuData}/>
+        {pokemonData.map((pokemon)=>{
+          return <PokemonCard key={pokemon.name} pokemonData={pokemon}/>
+        })}
       </ScrollView>
     </SafeAreaView>
   );
