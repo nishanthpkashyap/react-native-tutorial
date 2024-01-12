@@ -1,12 +1,12 @@
 import { StyleSheet, SafeAreaView, ScrollView, StatusBar } from 'react-native';
-import RenderList from './components/_1_Render';
+import ScrollViewList from './components/_1_ScrollView_List_Render';
+import Flatlist from './components/_2_FlatList';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={[styles.safeAreaView]}>
-        <RenderList/>
-      </ScrollView>
+      {/* <ScrollViewList/> */}
+      <Flatlist/>
     </SafeAreaView>
   );
 }
@@ -17,7 +17,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     paddingTop: StatusBar.currentHeight,
   },
-  safeAreaView: {
-    paddingHorizontal: 16,
-  }
 });
+p
