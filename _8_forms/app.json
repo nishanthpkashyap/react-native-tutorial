@@ -3,7 +3,7 @@
     "name": "_8_forms",
     "slug": "_8_forms",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
