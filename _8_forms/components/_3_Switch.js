@@ -20,8 +20,8 @@ export default function CustomSwitch() {
             <View style={[styles.switchContainer]}>
                 <Text style={[styles.text]}>Dark Mode</Text>
                 <Switch value={isDarkMode} onValueChange={setDarkMode}
-                    trackColor={{false: "red", true: "green", }}
-                    thumbColor={{false: "red", true: "green"}}
+                    trackColor = {{false: "red", true: "green", }}
+                    thumbColor = "pink"
                 />
             </View>
             <Text style={[styles.text]}>{name}</Text>
