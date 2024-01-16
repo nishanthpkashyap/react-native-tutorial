@@ -1,12 +1,14 @@
 import { StyleSheet, Text, SafeAreaView, StatusBar,  } from 'react-native';
 import Textinput from './components/_1_TextInput';
 import MultiLineTextInput from './components/_2_MultiLine_TxtInput';
+import CustomSwitch from './components/_3_Switch';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Textinput/> */}
-      <MultiLineTextInput/>
+      {/* <MultiLineTextInput/> */}
+      <CustomSwitch/>
     </SafeAreaView>
   );
 }
