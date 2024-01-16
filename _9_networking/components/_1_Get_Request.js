@@ -1,29 +1,49 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FlatList, SafeAreaView, StyleSheet, View, Text } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, View, Text, ActivityIndicator } from "react-native";
 
 
 export default function GetRequest(){
 
     const [posts, setPosts] = useState([]);
+    const [isLoading, setLoading] = useState(true);
+    const [refreshing, setRefreshing] = useState(false);
 
     const fetchData = async (limit=10)=>{
         const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
         setPosts(data);
+        setLoading(false);
+    }
+
+    const handleRefresh = ()=>{
+        setRefreshing(true);
+        fetchData(20);
+        setRefreshing(false); 
     }
 
     useEffect(() => {
         fetchData();
     }, []);
 
+    if(isLoading){
+        return (
+            <SafeAreaView style={[styles.loadingContainer]}>
+                <ActivityIndicator size={"large"} color={"lightblue"} />
+                <Text>Loading...</Text>
+            </SafeAreaView>
+        )
+    }
+
     return (
         <SafeAreaView style={[styles.container]}>
             <FlatList 
                 data={posts}
+                refreshing={refreshing}
+                onRefresh={handleRefresh}
                 renderItem={({item})=>{
                     return (
                         <View style={[styles.card]}>
-                            <Text style={[styles.titleText]}>{item.title}</Text>
+                            <Text style={[styles.titleText]}>{item.id}. {item.title}</Text>
                             <Text style={[styles.bodyText]}>{item.body}</Text>
                         </View>
                     );
@@ -66,7 +86,7 @@ const styles = StyleSheet.create({
             elevation: 5,
           },
         }),
-      }, 
+    }, 
     titleText: {
         fontSize: 30,
         paddingVertical: 10,
@@ -85,5 +105,11 @@ const styles = StyleSheet.create({
         fontSize: 40, 
         textAlign: 'center',
         marginVertical: 12,
+    },
+    loadingContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: "#f3f5f4",
     },
 });
