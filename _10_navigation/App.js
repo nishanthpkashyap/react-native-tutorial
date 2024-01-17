@@ -1,10 +1,12 @@
 import { StyleSheet, View, StatusBar } from 'react-native';
 import StackNavigation from './components/_1_StackNavigation';
+import DrawerNavigation from './components/_2_DrawerNavigation';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <StackNavigation/>
+      {/* <StackNavigation/> */}
+      <DrawerNavigation/>
     </View>
   );
 }
