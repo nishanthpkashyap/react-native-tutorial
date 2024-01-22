@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, Text, TextInput, StyleSheet, Button, KeyboardAvoidingView, Image, Platform, } from "react-native";
+import { View, Text, TextInput, TouchableWithoutFeedback, StyleSheet, Button, KeyboardAvoidingView, Image, Platform, Keyboard} from "react-native";
 import LoginImage from "../assets/adaptive-icon.png"
 
 export default function CustomForm() {
@@ -29,42 +29,44 @@ export default function CustomForm() {
     }
 
     return (
-        <KeyboardAvoidingView 
-            behavior="padding" 
-            keyboardVerticalOffset={Platform.OS === 'ios' ? 50 : -200} 
-            style={[styles.container]}
-        >
-            <View style={[styles.formContainer]}>
-                <Image source={LoginImage} style={[styles.image]}/>
-                <Text style={[styles.text]}>Username</Text>
-                <TextInput 
-                    style={[styles.textInput]} 
-                    value={username} 
-                    onChangeText={setUsername}
-                    placeholder="Enter your username"
+        <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()}>
+            <KeyboardAvoidingView 
+                behavior="padding" 
+                keyboardVerticalOffset={Platform.OS === 'ios' ? 50 : -200} 
+                style={[styles.container]}
+            >
+                <View style={[styles.formContainer]}>
+                    <Image source={LoginImage} style={[styles.image]}/>
+                    <Text style={[styles.text]}>Username</Text>
+                    <TextInput 
+                        style={[styles.textInput]} 
+                        value={username} 
+                        onChangeText={setUsername}
+                        placeholder="Enter your username"
 
-                />
-                {
-                    errors.username && <Text style={[styles.errorText]}>{errors.username}</Text>
-                }
-                <Text style={[styles.text]}>Password</Text>
-                <TextInput 
-                    style={[styles.textInput]} 
-                    value={password} 
-                    onChangeText={setPassword}
-                    placeholder="Enter your password"
-                    secureTextEntry
-                />
-                {
-                    errors.password && <Text style={[styles.errorText]}>{errors.password}</Text>
-                }
-                <View style={styles.submitButton}>
-                    <Button title="Login" onPress={()=>{
-                        handleFormSubmit();
-                    }}/>
+                    />
+                    {
+                        errors.username && <Text style={[styles.errorText]}>{errors.username}</Text>
+                    }
+                    <Text style={[styles.text]}>Password</Text>
+                    <TextInput 
+                        style={[styles.textInput]} 
+                        value={password} 
+                        onChangeText={setPassword}
+                        placeholder="Enter your password"
+                        secureTextEntry
+                    />
+                    {
+                        errors.password && <Text style={[styles.errorText]}>{errors.password}</Text>
+                    }
+                    <View style={styles.submitButton}>
+                        <Button title="Login" onPress={()=>{
+                            handleFormSubmit();
+                        }}/>
+                    </View>
                 </View>
-            </View>
-        </KeyboardAvoidingView>
+            </KeyboardAvoidingView>
+        </TouchableWithoutFeedback>
     );
 }
 
